@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * Vending
  */
-public class Vending {
+public abstract class Vending {
 
-    List<Product> list_product = new ArrayList<>();
+    private List<Product> list_product = new ArrayList<>();
 
     public void addProduct(Product product) {
         list_product.add(product);
@@ -16,7 +16,7 @@ public class Vending {
 
     public Product getProduct(String name) {
         for (Product product : list_product) {
-            if (name.equals(product.name)) {
+            if (name.equals(product.getKind())) {
                 return product;
             }
         }

@@ -7,10 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Vending vending1 = new Vending();
-        Product product1 = new Product();
-        product1.name = "mango";
-        System.out.println(vending1.getProduct("mango"));
+        Vending vending1 = new FructVending();
+        Product product1 = new Apple("Apple", 20, 1L);
+        Product product2 = new Orange("Orange", 30, 2L);
+        Product product3 = new Banana("Banana", 25, 3L);
+        System.out.println(vending1.getProduct("Apple"));
 
     }
 }
